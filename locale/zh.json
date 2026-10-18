@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Serper 网页搜索",
+    "description": "把 Serper（google.serper.dev/search）注册为 web 能力 seam（ctx.web）的搜索提供方；另外注册一个直连 Serper 的 serper_search 工具，不依赖 searchProvider 选择。"
+  }
+}

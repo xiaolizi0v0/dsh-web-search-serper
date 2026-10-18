@@ -1,0 +1,26 @@
+# dsh-serper-provider — bundle patch layer.
+#
+# One Host row. The plugin registers the Serper search provider into the web
+# capability seam (`ctx.web`) inside `apply`, and also registers its own
+# `serper_search` tool, which executes through the same provider instance and so
+# works without `searchProvider` being pinned.
+#
+# Provider selection is deliberately left un-pinned, so the seam keeps resolving
+# whatever the profile already selects. Once a Serper key exists, two usable
+# providers are registered and an un-pinned search reports
+# `WEB_PROVIDER_AMBIGUOUS`; uncomment the layer below to make Serper the backend.
+
+- insert:
+    - id: web-search-serper
+      name: 'dsh-serper-provider'
+      config:
+        apiKeyEnv: SERPER_API_KEY
+        endpoint: https://google.serper.dev/search
+        gl: us
+        hl: en
+        num: 10
+        page: 1
+
+# - id: include:web
+#   config:
+#     searchProvider: serper

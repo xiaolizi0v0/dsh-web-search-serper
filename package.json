@@ -1,0 +1,53 @@
+{
+  "name": "dsh-serper-provider",
+  "version": "1.0.1",
+  "type": "module",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "xiaolizi0v0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaolizi0v0/dsh-web-search-serper.git"
+  },
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "serper",
+    "google-search",
+    "web-search",
+    "plugin",
+    "bundle"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": ["index.js", "client.js", "locale/*.json", "icon.svg", "cordis.patch.yml", "LICENSE", "README.md"],
+  "icon": "./icon.svg",
+  "meta": {
+    "title": "Serper Web Search",
+    "description": "Serper (https://google.serper.dev/search) search provider for the DeepSeek Harness web capability seam (ctx.web), plus a direct serper_search tool."
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-web": "*",
+    "@deepseek-ai/dsh-credentials": "*",
+    "@deepseek-ai/dsh-launch-environment": "*",
+    "@deepseek-ai/dsh-tools": "*",
+    "@deepseek-ai/schemastery": "*"
+  },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-settings"]
+    }
+  }
+}

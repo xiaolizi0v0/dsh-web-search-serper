@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Serper Web Search",
+    "description": "Registers a Serper (google.serper.dev/search) backend as the web seam's search provider; the model-facing web_search tool comes from dsh-tool-web."
+  }
+}
