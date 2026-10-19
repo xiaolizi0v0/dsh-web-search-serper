@@ -1,5 +1,5 @@
 {
-  "name": "dsh-serper-provider",
+  "name": "@xiaolizi0v0/dsh-web-search-serper",
   "version": "1.0.1",
   "type": "module",
   "main": "index.js",

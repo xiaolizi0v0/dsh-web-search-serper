@@ -20,7 +20,7 @@ import { WebError } from "@deepseek-ai/dsh-web";
  * Both paths run through the same `search()` implementation; the tool owns only
  * schema, validation, formatting, and presentation.
  *
- * @module dsh-serper-provider
+ * @module @xiaolizi0v0/dsh-web-search-serper
  */
 
 /** Stable id this provider registers under. */

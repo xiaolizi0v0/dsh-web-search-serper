@@ -1,4 +1,4 @@
-# Serper Web Search provider (`dsh-serper-provider`)
+# Serper Web Search provider (`@xiaolizi0v0/dsh-web-search-serper`)
 
 A Cordis bundle that registers a Serper backend into the Harness web capability
 seam (`ctx.web`), following the shape of the official
@@ -57,7 +57,7 @@ page size. The seam enforces the final cap, so `truncated` is never set here.
 
 Settings namespace: `web-search-serper` (the row id), which is what the Plugin
 Manager resolves as `props.form` for the row. The `plugins.row.config` slot key is
-`dsh-serper-provider#web-search-serper` (`<package name>#<row id>`), and
+`@xiaolizi0v0/dsh-web-search-serper#web-search-serper` (`<package name>#<row id>`), and
 `client.js` registers the form there. The official Settings → Web search page is
 bound to the `web-search-deepseek` namespace, so it never shows Serper.
 
@@ -91,12 +91,12 @@ provider object directly, so it works without `searchProvider` being configured:
 ## Install
 
 From the DSH 1024Store catalog (the package is published to npm as
-`dsh-serper-provider`):
+`@xiaolizi0v0/dsh-web-search-serper`):
 
 ```powershell
-dsh1024 plugin --profile web add dsh-serper-provider
+dsh1024 plugin --profile web add @xiaolizi0v0/dsh-web-search-serper
 # or the official command
-dsh plugin --profile web add dsh-serper-provider
+dsh plugin --profile web add @xiaolizi0v0/dsh-web-search-serper
 ```
 
 Or from this directory as a local bundle:

@@ -1,4 +1,4 @@
-# dsh-serper-provider — bundle patch layer.
+# @xiaolizi0v0/dsh-web-search-serper — bundle patch layer.
 #
 # One Host row. The plugin registers the Serper search provider into the web
 # capability seam (`ctx.web`) inside `apply`, and also registers its own
@@ -12,7 +12,7 @@
 
 - insert:
     - id: web-search-serper
-      name: 'dsh-serper-provider'
+      name: '@xiaolizi0v0/dsh-web-search-serper'
       config:
         apiKeyEnv: SERPER_API_KEY
         endpoint: https://google.serper.dev/search

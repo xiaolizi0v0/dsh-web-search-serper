@@ -1,5 +1,5 @@
 window.__ModuleLoader__.load({
-  id: 'dsh-serper-provider',
+  id: '@xiaolizi0v0/dsh-web-search-serper',
   factory(require) {
     const React = require('react');
     const h = React.createElement;
@@ -7,7 +7,7 @@ window.__ModuleLoader__.load({
     /**
      * The browser half of the Serper search provider: the settings form the
      * Plugins page renders for this bundle's row, over the config section the
-     * Host serves for `dsh-serper-provider#web-search-serper`.
+     * Host serves for `@xiaolizi0v0/dsh-web-search-serper#web-search-serper`.
      *
      * The API key is the one control that does not live in the section: its
      * literal never rides a response, so the page learns only whether one is
@@ -21,7 +21,7 @@ window.__ModuleLoader__.load({
     /** The settings namespace the Host serves for this row's config section. */
     const SETTINGS_NS = 'web-search-serper';
     /** The `plugins.row.config` key this bundle's row owns (`<package name>#<row id>`). */
-    const ROW_CONFIG_KEY = 'dsh-serper-provider#web-search-serper';
+    const ROW_CONFIG_KEY = '@xiaolizi0v0/dsh-web-search-serper#web-search-serper';
     /** Credential reference the provider resolves when the section names none. */
     const DEFAULT_API_KEY_REF = 'SERPER_API_KEY';
     /** Scalar section fields the form stages, in display order. */
